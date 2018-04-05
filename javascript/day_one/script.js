@@ -7,3 +7,5 @@ var name = "Michal";
 var age = 25;
 
 console.log(typeof + name);
+
+console.log("My name is " + name);
