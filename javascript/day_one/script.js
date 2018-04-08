@@ -1,7 +1,11 @@
+//Task 1
+
 alert("hello world");
 
 console.log(typeof + 342342);
 console.log([1,2,3,4]);
+
+//Task 2
 
 var name = "Michal";
 var age = 25;
