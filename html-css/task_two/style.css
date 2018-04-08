@@ -1,0 +1,24 @@
+#one{
+    background: cadetblue;
+}
+
+#two{
+    font-family: "DejaVu Sans";
+    font-size: 12px;
+}
+
+#three{
+    border: 1px solid black;
+}
+
+#four{
+    margin: 20px;
+}
+
+#five{
+    color: coral;
+}
+
+#six{
+    word-spacing: 5px;
+}
