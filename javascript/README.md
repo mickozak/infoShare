@@ -1,0 +1,12 @@
+# JavaScript
+
+1. Day one:
+  - hello world,
+  - console.log,
+  - type of.
+2. Day two:
+  - variables,
+  - operators, 
+  - conditional statements and expressions,
+  - loops,
+  - arrays.
