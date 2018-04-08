@@ -68,3 +68,36 @@ while(milkTemp<=100){
 }
 
 console.log('Temperature', milkTemp);
+
+//Task 9
+
+var newTab = [];
+
+for (var i = 0; i<100; i++){
+    newTab[i] = Math.floor(Math.random()*10);
+}
+
+console.log(newTab);
+
+//Task 10
+
+var arrayNewK = [1,2,3,4,5];
+arrayNewK.push(6);
+arrayNewK.unshift(0);
+console.log(arrayNewK);
+arrayNewK.pop();
+arrayNewK.shift();
+console.log(arrayNewK);
+
+//Task 11
+
+var newTabTwo = [];
+
+for (var i = 0; i<10; i++){
+    newTabTwo[i] = Math.floor(Math.random()*10);
+}
+
+console.log(newTabTwo);
+
+var newTabTwoSliced = newTabTwo.slice(2,7);
+console.log(newTabTwoSliced);
