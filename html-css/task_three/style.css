@@ -1,4 +1,18 @@
-#two{
-    background: gray;
-    position: absolute;
+#content{
+    position: relative;
+}
+
+#block_one{
+    border: 1px solid blue;
+    margin: 5px;
+}
+
+#block_two{
+    border: 1px solid red;
+    margin: 5px;
+}
+
+#block_three{
+    border: 1px solid green;
+    margin: 5px;
 }
