@@ -10,3 +10,5 @@
   - conditional statements and expressions,
   - loops,
   - arrays.
+  3. Day three:
+  - indexOf,
