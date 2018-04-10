@@ -17,3 +17,15 @@ console.log(secondWord);
 var aLetter = variableString.slice(4,5);
 
 console.log(aLetter);
+
+//Task 3
+
+var myNewCar = new Object();
+
+myNewCar.make='Toyota';
+
+myNewCar.model='Corolla';
+
+myNewCar.year=2006;
+
+console.log(myNewCar);
