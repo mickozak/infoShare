@@ -77,7 +77,6 @@ console.log(counter);
 
 //Task8
 
-
 var arr = [1,2,3,4,5];
 
 function loop(arr, index) {
