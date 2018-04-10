@@ -7,3 +7,9 @@ var nine = arrayNew.indexOf(10);
 console.log(nine);
 
 //Task 2
+
+var variableString = "My name is Michal";
+
+var secondWord = variableString.substr(3,5);
+
+console.log(secondWord);
