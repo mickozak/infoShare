@@ -13,3 +13,7 @@ var variableString = "My name is Michal";
 var secondWord = variableString.substr(3,5);
 
 console.log(secondWord);
+
+var aLetter = variableString.slice(4,5);
+
+console.log(aLetter);
