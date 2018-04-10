@@ -1,32 +1,32 @@
-//Task 1 - indexOf
+//Task 1
 
-var arrayNew = [1,2,3,4,5,6,7,8,9,10];
+var str = 'Ala ma kota, kot ma Ale'
 
-var nine = arrayNew.indexOf(10);
+var indexOfFirstSpace = str.indexOf(' ')
+var indexOfSecondSpace = str.indexOf(' ', indexOfFirstSpace + 1)
 
-console.log(nine);
+var secondWord = str.slice(indexOfFirstSpace + 1, indexOfSecondSpace)
+
+console.log(secondWord)
+console.log('second word contains "a"?', secondWord.indexOf('a') !== -1)
 
 //Task 2
 
-var variableString = "My name is Michal";
+var myCar = new Object() // empty object
 
-var secondWord = variableString.substr(3,5);
-
-console.log(secondWord);
-
-var aLetter = variableString.slice(4,5);
-
-console.log(aLetter);
+myCar.make = 'Opel'
+myCar.model = 'Corsa C'
+myCar.year = 2004
+myCar.color = 'yellow'
 
 //Task 3
 
-var myNewCar = new Object();
+function add(a, b) {
+    return a + b;
+}
 
-myNewCar.make='Toyota';
-myNewCar.model='Corolla';
-myNewCar.year=2006;
-
-console.log(myNewCar);
+console.log(add(1, 2))
+console.log(add(4, 6))
 
 //Task 4
 
@@ -49,52 +49,81 @@ console.log(sum(2,7));
 
 //Task 6
 
-var counter=0;
+var counter = 0
 
-function addTwo(a,b) {
+function add(a, b) {
+    counter++
 
-    var sum = a + b;
-    counter++;
-    return sum;
+    return a + b
 }
 
-addTwo();
-addTwo();
-addTwo();
+add(1,2)
+add(1,2)
+add(1,2)
+add(1,2)
 
-console.log(counter);
+console.log(counter)
 
 //Task 7
 
-(function addThree(a,b,c) {
-    var counter;
-    counter=0;
-    var sum = a + b + c;
-    counter++;
-    console.log(counter);
-    return sum;
-})(4,5,1)
+(function() {
+
+    // from TASK 3.4
+    var counter = 0
+
+    function add(a, b) {
+        counter++
+
+        return a + b
+    }
+
+    add(1,2)
+    add(1,2)
+    add(1,2)
+    add(1,2)
+
+    console.log(counter)
+
+
+})()
+
+console.log(counter)
 
 //Task8
 
-var arr = [1,2,3,4,5];
+var array = [1, 2 ,3, 4, 5]
 
-function loop(arr, index) {
-    console.log(arr[index])
+function arrSum(arr, index) {
+    var lastIndex = arr.length - 1
 
-    var lastIndex = arr.length-1; //zmienna pomocnicza
-
-    if (index === lastIndex){ //jesli index jest ostatnim elelemnetem to stopujemy
-        return;
+    if (index == lastIndex) {
+        return arr[index]
     }
 
-    loop(arr, index+1) // w innym przypadku wywołujemy dalej tą funkcje
-
+    return arr[index] + arrSum(arr, index + 1)
 }
 
-loop(arr, 0)
+var sum = arrSum(array, 0) // start loop from index 0
+
+console.log('arr sum', sum)
 
 //Task 9
+
+ar array = [1, 2 ,3, 4, 5]
+
+function arrLoop(arr, index) {
+    console.log(arr[index])
+
+    var lastIndex = arr.length - 1
+
+    if (index < lastIndex) {
+        arrLoop(arr, index + 1)
+    }
+}
+
+arrLoop(array, 0)
+
+//Task 10
 
 var myCarNewSecond = {
     make: "Audi",
