@@ -47,3 +47,19 @@ function sum(a,b) {
 
 console.log(sum(2,7));
 
+//Task 6
+
+var counter=0;
+
+function addTwo(a,b) {
+
+    var sum = a + b;
+    counter++;
+    return sum;
+}
+
+addTwo();
+addTwo();
+addTwo();
+
+console.log(counter);
