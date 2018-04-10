@@ -13,4 +13,6 @@
   3. Day three:
   - indexOf,
   - objects,
-  - function.
+  - function,
+  - hoisting
+  - storage.
