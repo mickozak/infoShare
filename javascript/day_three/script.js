@@ -23,9 +23,18 @@ console.log(aLetter);
 var myNewCar = new Object();
 
 myNewCar.make='Toyota';
-
 myNewCar.model='Corolla';
-
 myNewCar.year=2006;
 
 console.log(myNewCar);
+
+//Task 4
+
+var myNewCarTwo = {
+    make: 'Toyota',
+    model: 'Corolla',
+    year: 2006
+}
+
+console.log(myNewCarTwo);
+
