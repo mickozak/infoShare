@@ -149,3 +149,13 @@ function question() {
     }
 }
 question();
+
+//Task 12
+
+var userName = sessionStorage.getItem('name')
+
+if (userName){
+    alert('hello ' + userName)
+} else {
+    sessionStorage.setItem('name', prompt('Type your name'))
+}
