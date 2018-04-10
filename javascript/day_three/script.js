@@ -63,3 +63,14 @@ addTwo();
 addTwo();
 
 console.log(counter);
+
+//Task 7
+
+(function addThree(a,b,c) {
+    var counter;
+    counter=0;
+    var sum = a + b + c;
+    counter++;
+    console.log(counter);
+    return sum;
+})(4,5,1)
