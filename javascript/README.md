@@ -12,3 +12,5 @@
   - arrays.
   3. Day three:
   - indexOf,
+  - objects,
+  - function.
