@@ -93,3 +93,19 @@ function loop(arr, index) {
 }
 
 loop(arr, 0)
+
+//Task 9
+
+var myCarNewSecond = {
+    make: "Audi",
+    model: "RS7",
+    color: "red"
+}
+
+function changeColor(car) {
+    car.color = "blue"
+}
+
+
+changeColor(myCarNewSecond);
+console.log(myCarNewSecond);
