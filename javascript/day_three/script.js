@@ -74,3 +74,23 @@ console.log(counter);
     console.log(counter);
     return sum;
 })(4,5,1)
+
+//Task8
+
+
+var arr = [1,2,3,4,5];
+
+function loop(arr, index) {
+    console.log(arr[index])
+
+    var lastIndex = arr.length-1; //zmienna pomocnicza
+
+    if (index === lastIndex){ //jesli index jest ostatnim elelemnetem to stopujemy
+        return;
+    }
+
+    loop(arr, index+1) // w innym przypadku wywołujemy dalej tą funkcje
+
+}
+
+loop(arr, 0)
