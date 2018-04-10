@@ -138,3 +138,14 @@ function changeColor(car) {
 
 changeColor(myCarNewSecond);
 console.log(myCarNewSecond);
+
+//Task 11
+
+function question() {
+    let answer = prompt('What is your name?')
+    console.log(answer);
+    if (answer!==""){
+        alert("Hello " + answer)
+    }
+}
+question();
