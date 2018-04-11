@@ -11,3 +11,12 @@ function question() {
 }
 
 question();
+
+//Task 2
+
+(function () {
+    var answer = prompt("What page do you want to visit?");
+    if (answer !==''){
+        window.location = 'http://' + answer;
+    }
+})();
