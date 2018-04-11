@@ -1,103 +1,173 @@
+//Task 1
+
+var personAge = 17;
+
+var audi = {}
+var opel = {}
+
+
+console.log('personAge >= 18?', personAge >= 18)
+console.log('personAge === 17?', personAge === 17)
+console.log('audi === audi?', audi === audi)
+console.log('audi !== opel?', audi === opel)
+console.log('NaN == NaN', NaN == NaN)
+console.log('is NaN', Number.isNaN(NaN))
+console.log('[] === []', [] === [])
+
+//Task 2
+
+var falsyValue = null
+var result = falsyValue || 1
+
+console.log('result', result)
+
 //Task 3
 
-var one = 5;
-var two = 10;
-var name = 'michal';
-var three = null;
+var arr = [1, 2, 6, 7, 1, 2, 3, 9, 2]
+var indexOfFirstNine = arr.indexOf(9)
 
-console.log(one==two);
-console.log(one===two);
-console.log(one>two);
-console.log(one<two);
-console.log(name===one);
-console.log(three<=two);
+console.log(indexOfFirstNine)
+
+var indexOfSecondNine = arr.indexOf(9, indexOfFirstNine+1)
+
+console.log(indexOfSecondNine)
+
+if (indexOfSecondNine === -1) {
+    arr.push(9)
+}
+
+console.log(arr)
 
 //Task 4
 
-var five = 2;
+var value = 5 // variable to check
 
-if (five==1){
-    console.log('Zmienna jest równa 1');
-} else if (five=='1'){
-    console.log('Zmienna jest równa "1"')
-} else if (five==2){
-    console.log('Zmienna jest równa 2')
-} else {console.log('Zmienna jest różna od 1 i 2')}
+if (value === 1) {
+    console.log(1)
+} else if (value === '1') {
+    console.log(2)
+} else if (value === 2) {
+    console.log(3)
+} else {
+    console.log(0)
+}
 
 //Task 5
 
-switch(five){
+var value = 1 // variable to check
+
+switch(value) {
     case 1:
-        console.log('Zmienna jest równa 1');
+        console.log(1)
         break;
+
+    case '1':
+        console.log(2)
+        break;
+
     case 2:
-        console.log('Zmienna jest równa 2');
+        console.log(3)
         break
     default:
-        console.log('Zmienna jest różna od 1 i 2');
+        console.log(0)
 }
 
 //Task 6
 
-var numbers = [1,2,3,4,5];
+var value = 2 
 
-for (var i = 0; i <= 5; i++){
-    console.log(numbers[i]);
-}
+var ternaryResult = value === 1
+    ? 1 
+    : value === '1'
+        ? 2  
+        :  value === 2
+            ? 3 
+            : 0  
+
+console.log(ternaryResult)
 
 //Task 7
 
 var random
-var smallerThanHalf = 0
+var smallerThanHalf = 0;
 
-for (var i = 0; i<10; i++) {
-    random = Math.random();
-    console.log('random', i, '=', random)
+for(var i = 0; i < 10; i++) {
+    random = Math.random() // generate random number and assign to "random" variable
+    console.log('random', i, ' = ', random)
 
-    if (random < 0.5) {
+    if (random < 0.5) { // increase smallerThanHalf variable if random is smaller than 0.5
         smallerThanHalf++
     }
 }
 
+console.log('smallerThanHalf', smallerThanHalf)
+
 //Task 8
 
-var milkTemp = 20;
+var milkTemp = 20 // init milk temperature
 
-while(milkTemp<=100){
+while(milkTemp <= 100) {
     milkTemp += Math.random()
+    // alternative: milkTemp = milkTemp + Math.random()
 }
+console.log('while', milkTemp)
 
-console.log('Temperature', milkTemp);
+// for:
+for(var milkTemp = 20; milkTemp <= 100; milkTemp += Math.random()) {}
+
+console.log('for', milkTemp)
+
+// while with break
+var milkTemp = 20 // init milk temperature
+
+while(true) {
+    milkTemp += Math.random()
+    if (milkTemp >= 100) {
+        break;
+    }
+}
+console.log('while with break', milkTemp)
 
 //Task 9
 
-var newTab = [];
+var arr = [] // empty array
 
-for (var i = 0; i<100; i++){
-    newTab[i] = Math.floor(Math.random()*10);
+for(var i = 0; i < 100; i++) {
+    arr[i] = Math.random() // assign random value to arr
 }
 
-console.log(newTab);
+console.log(arr);
 
 //Task 10
 
-var arrayNewK = [1,2,3,4,5];
-arrayNewK.push(6);
-arrayNewK.unshift(0);
-console.log(arrayNewK);
-arrayNewK.pop();
-arrayNewK.shift();
-console.log(arrayNewK);
+var arr = [1,2,3,4,5]
+
+arr.unshift(0) // add 0 as first element
+arr.push(6) // add 6 to the end of array
+
+console.log(arr)
+
+arr.shift() // remove first element
+arr.pop() // remove last element
+
+console.log(arr)
 
 //Task 11
 
-var newTabTwo = [];
 
-for (var i = 0; i<10; i++){
-    newTabTwo[i] = Math.floor(Math.random()*10);
+var evenRandomNumber = 6+Math.ceil((Math.random()*10))*2
+
+var arr = [] // empty array
+
+for(var i = 0; i < evenRandomNumber; i++) {
+    arr[i] = Math.random()
 }
 
-console.log(newTabTwo);
+var middleOfArray = evenRandomNumber / 2
+var startFrom = middleOfArray - 2
+var end = middleOfArray + 2
 
-var newTabTwoSliced = newTabTwo.slice(2,7);
-console.log(newTabTwoSliced);
+var newArr = arr.slice(startFrom, end)
+
+console.log(arr)
+console.log(newArr)
