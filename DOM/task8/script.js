@@ -1,6 +1,6 @@
 function addElement(container, content, tag) {
     container = container || document.querySelector('body')
-    content = content === undefined ? 'Ala ma kota' : content
+    content = content === undefined ? 'My name is' : content
     tag = tag || 'div'
 
     var newDiv = document.createElement(tag)
