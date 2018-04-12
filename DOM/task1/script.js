@@ -1,8 +1,7 @@
-// IIFE shorter example
 (function (){
-    if(confirm('Czy chcesz pytanie?')){
+    if(confirm('Do you have a question?')){
         alert(
-            prompt('Jak masz na imie?')
+            prompt('What is your name?')
         )
     }
 })()
