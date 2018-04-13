@@ -12,5 +12,3 @@ console.log('personDog', typeof personDog)
 console.log('zipCode', typeof zipCode)
 console.log('hoursInDay', typeof hoursInDay)
 console.log('days', typeof days)
-
-
