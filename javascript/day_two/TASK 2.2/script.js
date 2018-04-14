@@ -1,4 +1,4 @@
-var value = 5 // variable to check
+var value = 5
 
 if (value === 1) {
     console.log(1)
