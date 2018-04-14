@@ -1,5 +1,4 @@
-var userName = localStorage.getItem('name')  // get user name from storage
-
+var userName = localStorage.getItem('name')  
 if (userName) {
     alert('Hello ' + userName)
 }  else {
