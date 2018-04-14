@@ -1,4 +1,4 @@
-var value = 1 // variable to check
+var value = 1 
 
 switch(value) {
     case 1:
