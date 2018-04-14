@@ -4,6 +4,7 @@ while(milkTemp <= 100) {
     milkTemp += Math.random()
     
 }
+
 console.log('while', milkTemp)
 
 for(var milkTemp = 20; milkTemp <= 100; milkTemp += Math.random()) {}
