@@ -1,7 +1,5 @@
-// IIFE
 (function() {
 
-    // from TASK 3.4
     var counter = 0
 
     function add(a, b) {
@@ -16,7 +14,6 @@
     add(1,2)
 
     console.log(counter)
-
 
 })()
 
