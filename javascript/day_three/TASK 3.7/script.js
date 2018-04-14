@@ -10,4 +10,4 @@ function arrLoop(arr, index) {
     }
 }
 
-arrLoop(array, 0) // start loop from index 0
+arrLoop(array, 0) 
