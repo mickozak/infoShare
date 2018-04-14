@@ -1,7 +1,7 @@
-var arr = [] // empty array
+var arr = [] 
 
 for(var i = 0; i < 100; i++) {
-    arr[i] = Math.random() // assign random value to arr
+    arr[i] = Math.random()
 }
 
 console.log(arr);
