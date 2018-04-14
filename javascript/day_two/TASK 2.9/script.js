@@ -1,6 +1,6 @@
 var evenRandomNumber = 6+Math.ceil((Math.random()*10))*2
 
-var arr = [] // empty array
+var arr = [] 
 
 for(var i = 0; i < evenRandomNumber; i++) {
     arr[i] = Math.random()
@@ -14,7 +14,3 @@ var newArr = arr.slice(startFrom, end)
 
 console.log(arr)
 console.log(newArr)
-
-
-
-
