@@ -1,24 +1,16 @@
-var milkTemp = 20 // init milk temperature
+var milkTemp = 20 
 
 while(milkTemp <= 100) {
     milkTemp += Math.random()
-    // alternative: milkTemp = milkTemp + Math.random()
+    
 }
 console.log('while', milkTemp)
 
-
-
-
-// for:
 for(var milkTemp = 20; milkTemp <= 100; milkTemp += Math.random()) {}
 
 console.log('for', milkTemp)
 
-
-
-
-// while with break
-var milkTemp = 20 // init milk temperature
+var milkTemp = 20 
 
 while(true) {
     milkTemp += Math.random()
