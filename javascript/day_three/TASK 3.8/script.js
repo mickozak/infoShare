@@ -6,7 +6,7 @@ var myCar = {
 }
 
 function changeColor(car, newColor) {
-    car.color = newColor // reference!!
+    car.color = newColor
 }
 
 changeColor(myCar, 'blue')
