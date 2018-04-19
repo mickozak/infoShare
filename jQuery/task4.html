@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zadanie 4a. Efekty specjalne (animacje)</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="Author" content="Łukasz Krawczyk (Web Developer / Graphic &amp; Web Designer)" />
+	
+	<style>
+		input[type="button"] { font-size: large; }
+		div { width: 300px; height: 175px; border: 1px solid #ccc; margin-top: 20px; position: absolute; }
+	</style>
+	
+</head>
+<body>
+	
+	<input type="button" value="W lewo" />
+	<input type="button" value="W prawo" />
+	<div></div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<script>
+		// Wykorzystaj metodę .animate() oraz przyciski "W lewo" i "W prawo", żeby otrzymać prostokąt przesuwający się w poziomie o 400px po naciśnięciu odpowiedniego przycisku.
+		
+		$(function() {
+			$('[type="button"]').click(function() {
+				var kierunek = $(this).val();
+				if (kierunek == 'W prawo') {
+					$('div').animate({left: '+=400'}, 3000);
+				} else if (kierunek == 'W lewo') {
+					$('div').animate({left: '-=400'}, 3000);
+				}
+			});
+		});
+	</script>
+	
+</body>
+</html>

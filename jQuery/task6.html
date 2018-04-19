@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zadanie 5b. Efekty specjalne (animacje)</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="Author" content="Łukasz Krawczyk (Web Developer / Graphic &amp; Web Designer)" />
+	
+	<style>
+		#marquee { margin: 0 auto; overflow: hidden; width: 980px; height: 65px; background: url('logotypy.jpg') repeat-x 0 center; border: 1px solid gray; box-shadow: 2px 2px 8px #aaa; }
+	</style>
+	
+</head>
+<body>
+	
+	<div id="marquee"></div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<script>
+		/* Wykonaj w jQuery przewijający się w nieskończoność pasek z logotypami. Szerokość pliku .jpg z logotypami to 1744px. Pasek powinien zatrzymywać się po najechaniu na niego myszką, zaś po zjechaniu wskaźnikiem myszy poza jego obszar, pasek powinien ruszyć dalej od momentu, w którym się zatrzymał.
+		
+		Użyte w przykładzie logotypy mają charakter jedynie poglądowy i informacyjny. Logotypy te są własnością stosownych podmiotów i do nich należą wszelkie prawa autorskie i majątkowe. */
+		
+		var aktualnaPozycja;
+		
+		function pasekLogotypy() {
+			$('#marquee')
+				.animate({backgroundPosition: '-1744px'}, 20000, 'linear', function() {
+					$(this).css('backgroundPosition', '0');
+					pasekLogotypy();
+				})
+				.mouseover(function() {
+					$(this).stop();
+					aktualnaPozycja = $(this).css('backgroundPosition');
+				})
+				.mouseout(function() {
+					$(this).css('backgroundPosition', aktualnaPozycja);
+					pasekLogotypy();
+				});
+		}
+		
+		$(function() {
+			pasekLogotypy();
+		});
+	</script>
+	
+</body>
+</html>

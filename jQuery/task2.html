@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zadanie 2a. Odczyt i modyfikacja atrybutów i właściwości elementów HTML</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="Author" content="Łukasz Krawczyk (Web Developer / Graphic &amp; Web Designer)" />
+	
+	<style>
+		td img:hover { cursor: pointer; }
+	</style>
+	
+</head>
+<body>
+	
+	<table>
+		<tbody>
+			<tr>
+				<td><img src="100x75/chrysanthemum.jpg" alt="Chrysanthemum" /></td>
+				<td><img src="100x75/desert.jpg" alt="Desert" /></td>
+				<td><img src="100x75/hydrangeas.jpg" alt="Hydrangeas" /></td>
+				<td><img src="100x75/jellyfish.jpg" alt="Jellyfish" /></td>
+				<td><img src="100x75/koala.jpg" alt="Koala" /></td>
+				<td><img src="100x75/lighthouse.jpg" alt="Lighthouse" /></td>
+				<td><img src="100x75/penguins.jpg" alt="Penguins" /></td>
+				<td><img src="100x75/tulips.jpg" alt="Tulips" /></td>
+			</tr>
+		</tbody>
+	</table>
+	<div><img src="#" alt="" /></div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<script>
+		// Stwórz taką galerię obrazków, w której kliknięcie miniaturowego obrazka wewnątrz komórki tabeli HTML powoduje wyświetlenie odpowiadającego mu dużego obrazka wewnątrz elementu div położonego poniżej. Zadbaj również o to, by dynamicznie wygenerowany duży obrazek posiadał odpowiadający klikniętej miniaturce tekst alternatywny, tj. atrybut alt. Duże obrazy znajdują się w folderze 400x300, a małe w folderze 100x75. Nazwy plików w obu folderach są identyczne.
+		
+		$(function() {
+			$('td img').click(function() {
+				var adres = $(this).attr('src').replace('100x75', '400x300');
+				var opis = $(this).attr('alt');
+				$('div img').attr({'src': adres, 'alt': opis});
+			});
+		});
+	</script>
+	
+</body>
+</html>
