@@ -4,7 +4,6 @@
 	<title>Zadanie 3. Efekty specjalne (animacje)</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="Author" content="Łukasz Krawczyk (Web Developer / Graphic &amp; Web Designer)" />
 </head>
 <body>
 	
@@ -28,9 +27,7 @@
 		
 		Przetestuj działanie metod animacji:
 		a) z predefiniowanym parametrem 'fast'
-		b) z predefiniowanym parametrem 'medium'
-		c) z predefiniowanym parametrem 'slow'
-		d) bez żadnych parametrów */
+		 */
 
 		$(function() {
 			// a)
@@ -40,30 +37,6 @@
 					$(this).children().toggle('fast');
 				}
 			);
-			
-			// b)
-			/* $('li > ul').slideUp('medium');
-			$('li:has("ul")').click(
-				function() {
-					$(this).children().slideToggle('medium');
-				}
-			); */
-			
-			// c)
-			/* $('li > ul').fadeOut('slow');
-			$('li:has("ul")').click(
-				function() {
-					$(this).children().fadeToggle('slow');
-				}
-			); */
-			
-			// d)
-			/* $('li > ul').hide();
-			$('li:has("ul")').click(
-				function() {
-					$(this).children().toggle();
-				}
-			); */
 		});
 	</script>
 	
