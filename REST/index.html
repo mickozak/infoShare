@@ -38,6 +38,19 @@
                 })
         }
         
+// getAllTasks
+
+        const getMyUser = (id) => {
+
+            const url = "https://tasks.isa.valuepoint.pl/users" + "/" + id;
+
+            return fetch(url)
+                .then(response => response.json())
+                .then((data) => {
+                    console.log('getMyUser', data)
+                })
+        }
+        
     </script>
     
 </body>
