@@ -14,6 +14,22 @@
     <h2>My tasks - assigned</h2>
     <div id="assignedTasks"></div>
 
+    
+    <script>
+
+        const MY_ID = "5ae9d86a1f57534def4fb55d";
+        const MY_NICKNAME = "Przemek";
+
+        const getAllUsers = () => {
+            return fetch('https://tasks.isa.valuepoint.pl/users')
+                .then(response => response.json())
+                .then((data) => {
+                    console.log('data', data)
+                })
+        }
+        
+    </script>
+    
 </body>
 
 </html>
