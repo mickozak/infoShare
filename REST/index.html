@@ -28,6 +28,16 @@
                 })
         }
         
+// getAllUsers
+
+        const getAllTasks = () => {
+            return fetch('https://tasks.isa.valuepoint.pl/tasks')
+                .then(response => response.json())
+                .then((data) => {
+                    console.log('data', data)
+                })
+        }
+        
     </script>
     
 </body>
