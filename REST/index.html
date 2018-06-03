@@ -51,6 +51,124 @@
                 })
         }
         
+// getMyUser
+
+        const addTaskToUser = (creator, title) => {
+
+            const url = "http://tasks.isa.valuepoint.pl/tasks/add";
+       
+
+            const task = {
+                creator: creator,
+                title: title
+            }
+   
+
+            const fetchConfig = {
+                method: "PUT",
+                body: JSON.stringify(task),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            }
+            
+
+            fetch(url, fetchConfig)
+                .then(response => response.json())
+                .then((data) => {
+                    console.log('addTaskToUser', data)
+                })
+        
+        }
+  
+
+        const getAllTasksByMyEmail = (creator) => {
+
+            const url = `http://tasks.isa.valuepoint.pl/tasks/search/creator/${creator}`;
+   
+
+            fetch(url)
+                .then(response => response.json())
+                .then((tasks) => {
+                
+                    console.log('getAllTasksByMyEmail', tasks);
+
+
+                    const html = `<ul>
+                    ${tasks.data.map((task) => {
+                            return `<li>
+                            <strong>Tutuł: ${task.title}</strong><br/>
+                            - Od: ${task.creator}<br/>
+                            - Dla: ${task.assignee}<br/>
+                            <button onclick="window.assignTo('${task._id}')">Przypisz do</button>
+                            <button>Usuń</button>
+                            </li>`
+                        }).join('')}
+                    </ul>`;
+
+                    document.getElementById('tasks').innerHTML = html;
+
+
+
+                })
+        }
+        
+        getAllTasksByMyEmail(MY_NICKNAME)
+
+        const getAllTaskForMe = (assignee) => {
+
+            const url = `http://tasks.isa.valuepoint.pl/tasks/search/assignee/${assignee}`;
+          
+
+            fetch(url)
+                .then(response => response.json())
+                .then((tasks) => {
+
+                    console.log('getAllTaskForMe', tasks)
+
+                    const html = `<ul>
+                    ${tasks.data.map((task) => {
+                            return `<li>
+                            <strong>Tutuł: ${task.title}</strong><br/>
+                            - Od: ${task.creator}<br/>
+                            - Dla: ${task.assignee}<br/>
+                            <button onclick="window.assignTo('${task._id}')">Przypisz do</button>
+                            <button>Usuń</button>
+                            </li>`
+                        }).join('')}
+                    </ul>`;
+
+                    document.getElementById('assignedTasks').innerHTML = html;
+
+
+                })
+        }
+        
+        getAllTaskForMe(MY_NICKNAME);
+
+        window.assignTo = (task_id) => {
+            
+            const assignee = prompt('podaj do kogo przepisujesz taska');
+
+            const url = `http://tasks.isa.valuepoint.pl/tasks/${task_id}/assign-to/${assignee}`;
+
+            if (assignee.length) {
+                fetch(url)
+                    .then(d => d.json())
+                    .then((data) => {
+                        console.log('assingTo', data);
+                        alert(`Przypisane do ${assignee}`)
+                    })
+            }
+        }
+
+        setInterval(()=>{
+            // żeby odświeżało taski
+            getAllTaskForMe(MY_NICKNAME);
+            getAllTasksByMyEmail(MY_NICKNAME)
+
+        },3000)
+        
     </script>
     
 </body>
